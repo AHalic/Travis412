@@ -23,4 +23,6 @@ public class SimpleCalculatorTest {
 		assertEquals(calc.minus(4, -2), 6);
 	}
 
+	@Test
+	public void testMultiplyNegatives() {assertEquals(calc.multiply(-1,-1),1);}
 }
