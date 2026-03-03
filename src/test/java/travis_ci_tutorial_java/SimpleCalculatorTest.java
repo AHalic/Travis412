@@ -23,6 +23,13 @@ public class SimpleCalculatorTest {
 		assertEquals(calc.minus(4, -2), 6);
 	}
 
+	// TESTS FOR MULTIPLY
 	@Test
 	public void testMultiplyNegatives() {assertEquals(calc.multiply(-1,-1),1);}
+
+	// TESTS FOR DIVIDE
+	@Test
+	public void testDividePositives() {
+		assertEquals(calc.divide(6, 2), 3);
+	}
 }
