@@ -32,4 +32,24 @@ public class SimpleCalculatorTest {
 	public void testDividePositives() {
 		assertEquals(calc.divide(6, 2), 3);
 	}
+
+	@Test
+	public void testDivideNegatives() {
+		assertEquals(calc.divide(-6, -2), 3);
+	}
+
+	@Test
+	public void testDividePositiveByNegative() {
+		assertEquals(calc.divide(6, -2), -3);
+	}
+
+	@Test
+	public void testDivideByZero() {
+		try {
+			calc.divide(5, 0);
+			fail("Expected an ArithmeticException to be thrown");
+		} catch (ArithmeticException e) {
+			assertEquals("/ by zero", e.getMessage());
+		}
+	}
 }
